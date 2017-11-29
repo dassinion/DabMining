@@ -1,0 +1,6 @@
+{
+    "name": "Marijuanacoin",
+    "symbol": "MAR",
+    "algorithm": "x11",
+    "mposDiffMultiplier": 256
+}
