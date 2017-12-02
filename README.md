@@ -1,12 +1,7 @@
 [![Build Status](https://travis-ci.org/UNOMP/unified-node-open-mining-portal.png?branch=master)](https://travis-ci.org/UNOMP/unified-node-open-mining-portal)
 
-#### Unified NOMP
-
-This repo will serve as an open source multipool. Multipool capabilities are in alpha testing in this version. This will give the ability to utilize NOMP with merged capabilities but NO merged coin payouts. *ONLY* the main chain coins will payout and calculate correctly at the moment.
-
-This portal is an extremely efficient, highly scalable, all-in-one, easy to setup cryptocurrency mining pool written in Node.js. 
-It contains a merged stratum pool server; reward/payment/share processor for multipooling; and an (*in progress*)
-responsive user-friendly front-end website featuring mining instructions, in-depth live statistics, and an admin center.
+#### DabMining
+This software is used to run the mining pool at DabMining.co. This is a fork of UNOMP. 
 
 #### Production Usage Notice - Do it with caution!
 This is beta software. All of the following are things that can change and break an existing setup: functionality of any feature,
@@ -17,7 +12,6 @@ production usage because it can and ~~often~~ will break your setup and require 
 * [Features](#features)
   * [Attack Mitigation](#attack-mitigation)
   * [Security](#security)
-  * [Planned Features](#planned-features)
 * [Usage](#usage)
   * [Requirements](#requirements)
   * [Setting Up Coin Daemon](#0-setting-up-coin-daemon)
@@ -28,8 +22,7 @@ production usage because it can and ~~often~~ will break your setup and require 
     * [Pool Config](#pool-config)
     * [Setting Up Blocknotify](#optional-recommended-setting-up-blocknotify)
   * [Starting the Portal](#3-start-the-portal)
-  * [Upgrading UNOMP](#upgrading)
-* [Donations](#donations)
+  * [Upgrading](#upgrading)
 * [Credits](#credits)
 * [License](#license)
 
@@ -63,31 +56,22 @@ current round so that each and every share will be rewarded.
 * Detects and thwarts socket flooding (garbage data sent over socket in order to consume system resources).
 * Detects and thwarts zombie miners (botnet infected computers connecting to your server to use up sockets but not sending any shares).
 * Detects and thwarts invalid share attacks:
-   * UNOMP is not vulnerable to the low difficulty share exploits happening to other pool servers. Other pool server
+   * DabMining is not vulnerable to the low difficulty share exploits happening to other pool servers. Other pool server
    software has hardcoded guesstimated max difficulties for new hashing algorithms while UNOMP dynamically generates the
    max difficulty for each algorithm based on values founds in coin source code.
    * IP banning feature which on a configurable threshold will ban an IP for a configurable amount of time if the miner
    submits over a configurable threshold of invalid shares.
-* UNOMP is written in Node.js which uses a single thread (async) to handle connections rather than the overhead of one
+* DabMining is written in Node.js which uses a single thread (async) to handle connections rather than the overhead of one
 thread per connection, and clustering is also implemented so all CPU cores are taken advantage of. Result? Fastest stratum available.
 
 
 #### Security
-UNOMP has some implicit security advantages for pool operators and miners:
+DabMining has some implicit security advantages for pool operators and miners:
 * Without a registration/login system, non-security-oriented miners reusing passwords across pools is no longer a concern.
 * Automated payouts by default and pool profits are sent to another address so pool wallets aren't plump with coins -
 giving hackers little reward and keeping your pool from being a target.
 * Miners can notice lack of automated payments as a possible early warning sign that an operator is about to run off with their coins.
 
-
-#### Planned Features
-
-* UNOMP API - Used by the website to display stats and information about the pool(s) on the portal's front-end website. Mostly complete.
-
-* Integration of [addie.cc](http://addie.cc) usernames for multiple payout type without using a public address that may/may not work with the 
-coin (still not 100% committed yet, see Feature #7)
-
-* Upgrade codebase to operate in node v 0.12. Multi-hashing module is still throwing fits.
 
 Usage
 =====
@@ -157,13 +141,13 @@ Explanation for each field:
        will also be logged. */
     "logLevel": "debug", //or "warning", "error"
     
-    /* By default UNOMP logs to console and gives pretty colors. If you direct that output to a
+    /* By default DabMining logs to console and gives pretty colors. If you direct that output to a
        log file then disable this feature to avoid nasty characters in your log file. */
     "logColors": true, 
 
 
-    /* The UNOMP CLI (command-line interface) will listen for commands on this port. For example,
-       blocknotify messages are sent to UNOMP through this. */
+    /* The DabMining CLI (command-line interface) will listen for commands on this port. For example,
+       blocknotify messages are sent to DabMining through this. */
     "cliPort": 17117,
 
     /* By default 'forks' is set to "auto" which will spawn one process/fork/worker for each CPU
@@ -218,17 +202,17 @@ Explanation for each field:
         }
     },
 
-    /* This is the front-end. Its not finished. When it is finished, this comment will say so. */
+    /* This is the front-end. */
     "website": {
         "enabled": true,
         /* If you are using a reverse-proxy like nginx to display the website then set this to
            127.0.0.1 to not expose the port. */
         "host": "0.0.0.0",
         /* Title you want for your site. */
-        "siteTitle": "UNOMP Beta",
+        "siteTitle": "DabMining.co",
         "port": 8080,
         /* Used for displaying stratum connection data on the Getting Started page. */
-        "stratumHost": "pool.unomp.org",
+        "stratumHost": "stratum.dabmining.co",
         "stats": {
             /* Gather stats to broadcast to page viewers and store in redis for historical stats
                every this many seconds. */
@@ -494,23 +478,13 @@ output from UNOMP.
 
 
 #### Upgrading
-When updating UNOMP to the latest code its important to not only `git pull` the latest from this repo, but to also update
+When updating DabMining to the latest code its important to not only `git pull` the latest from this repo, but to also update
 the `merged-pooler` and `node-multi-hashing` modules, and any config files that may have been changed.
-* Inside your UNOMP directory (where the init.js script is) do `git pull` to get the latest UNOMP code.
+* Inside your DabMining directory (where the init.js script is) do `git pull` to get the latest UNOMP code.
 * Remove the dependenices by deleting the `node_modules` directory with `rm -r node_modules`.
 * Run `npm update` to force updating/reinstalling of the dependencies.
 * Compare your `config.json` and `pool_configs/coin.json` configurations to the latest example ones in this repo or the ones in the setup instructions where each config field is explained. You may need to modify or add any new changes.
 
-Donations
----------
-Below is my donation address. The original [credits](//github.com/sigwo/unified-node-open-mining-portal/blob/master/CREDITS.md) are listed here because I felt scammy if I totally removed them. They no longer are supporting the current development effort. Please donate to:
-
-* BTC: `19svwpxWAhD4zsfeEnnxExZgnQ46A3mrt3`
-
-Donors (email me to be added):
-* [elitemobb from altnuts.com](http://altnuts.com)
-* [mike from minerpools.com](https://minerpools.com)
-* [gentamicin from themultipool.com](http://themultipool.com)
 
 [Credits](//github.com/sigwo/unified-node-open-mining-portal/blob/master/CREDITS.md)
 -------
