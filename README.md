@@ -6,7 +6,7 @@ This software is used to run the mining pool at DabMining.co. This is a fork of 
 #### Production Usage Notice - Do it with caution!
 This is beta software. All of the following are things that can change and break an existing setup: functionality of any feature,
 structure of configuration files and structure of redis data. If you use this software in production then *DO NOT* pull new code straight into 
-production usage because it can and ~~often~~ will break your setup and require you to tweak things like config files or redis data, among other things.
+production usage because it can break your setup and require you to tweak things like config files or redis data, among other things.
 
 #### Table of Contents
 * [Features](#features)
@@ -21,7 +21,7 @@ production usage because it can and ~~often~~ will break your setup and require 
     * [Coin Config](#coin-config)
     * [Pool Config](#pool-config)
     * [Setting Up Blocknotify](#optional-recommended-setting-up-blocknotify)
-  * [Starting the Portal](#3-start-the-portal)
+  * [Starting DabMining Core](#3-start-the-portal)
   * [Upgrading](#upgrading)
 * [Credits](#credits)
 * [License](#license)
@@ -461,7 +461,7 @@ Alternatively, you can use a more efficient block notify script written in pure 
 are commented in [scripts/blocknotify.c](scripts/blocknotify.c).
 
 
-#### 3) Start the portal
+#### 3) Start the Pool Software Core
 
 ```bash
 node init.js
@@ -473,8 +473,8 @@ in case the master process crashes.
 * Use something like [redis-commander](https://github.com/joeferner/redis-commander) to have a nice GUI
 for exploring your redis database.
 * Use something like [logrotator](http://www.thegeekstuff.com/2010/07/logrotate-examples/) to rotate log 
-output from UNOMP.
-* Use [New Relic](http://newrelic.com/) to monitor your UNOMP instance and server performance.
+output from DabMining.
+* Use [New Relic](http://newrelic.com/) to monitor your DabMining instance and server performance.
 
 
 #### Upgrading
