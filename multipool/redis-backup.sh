@@ -1,6 +1,6 @@
 #!/bin/bash
-REDIS_SOURCE=~/unomp/multipool/backup/redis.dump.rdb
-BACKUP_DIR=~/unomp/multipool/backup/
+REDIS_SOURCE=~/dabmining/multipool/backup/redis.dump.rdb
+BACKUP_DIR=~/dabmining/multipool/backup/
 
 BACKUP_PREFIX="redis.dump.rdb"
 DAY=`date '+%a'`
