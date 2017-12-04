@@ -17,3 +17,179 @@
  * - BODY
  * - CUSTOM STYLES
  */
+body{
+font-size:16px;
+font-family: 'Montserrat', sans-serif;
+}
+#header{
+height:100%;
+min-height:100px;
+}
+#logo img{
+width:80px;
+}
+/*#left-panel{
+top:9%;
+padding:0px;
+}*/
+#content {
+    padding: 10px 14px 60px;
+    position: relative;
+}
+#passwordForm{
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    margin: 5% auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 1px 0px 18px 0px #333c;
+}
+#passwordForm input#password{
+	width: 100%;
+    border: 1px solid #0000003b;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+#passwordForm label{
+width: 100%;
+}
+#passwordForm button.pure-button.pure-button-primary {
+    background: #2e9300;
+    border: none;
+    padding: 10px 50px;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+.btn-header>:first-child>a{
+    background-color: #2e9300;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#2e9300),to(#42ab12));
+    background-image: -webkit-linear-gradient(top,#2e9300,#42ab12);
+    background-image: -moz-linear-gradient(top,#2e9300,#42ab12);
+    background-image: -ms-linear-gradient(top,#2e9300,#42ab12);
+    background-image: -o-linear-gradient(top,#2e9300,#42ab12);
+    background-image: linear-gradient(top,#2e9300,#42ab12);
+	border: 1px solid #40a90f;
+	color:#fff;
+}
+.header-top-heading{
+    background: #fff;
+    height: 50px;
+    border-left: 5px solid #40a90f;
+    width: 100%;
+    max-width: 600px;
+    margin: 0px auto;
+}
+.header-top-heading h3{
+padding:12px 15px;
+font-family: 'Montserrat', sans-serif;
+}
+#header {
+    display: block;
+    margin: 0;
+    padding: 0 13px 0 0;
+    background-color: #000000;
+    background-image: -moz-linear-gradient(top,#000000,#000000);
+    background-image: -webkit-gradient(linear,0 0,0 100%,from(#000000),to(#000000));
+    background-image: -webkit-linear-gradient(top,#000000,#000000);
+    background-image: -o-linear-gradient(top,#000000,#000000);
+    background-image: linear-gradient(to bottom,#000000,#000000);
+    background-repeat: repeat-x;
+}
+.btn-header.pull-right{
+margin-top:20px;
+}
+/*#ribbon{
+    background: #ffffff;
+    color: #000;
+    border-top: 5px solid #2d8d4c;
+    box-shadow: 1px 0px 2px 0px #000;
+
+}
+#ribbon .breadcrumb, #ribbon .breadcrumb a, #ribbon .breadcrumb li:last-child {
+    color: #000!important;
+    text-decoration: none!Important;
+    font-size: 14px;
+}*/
+.jarviswidget-color-blueDark>header{
+    border-color: #008d4c!important;
+    background: #008d4c;
+}
+
+.how-do-start-scetion{
+    border-top: 5px solid #05b53e;
+    background: #ffffff;
+    padding: 30px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin: 25px 0px;
+    width: 100%;
+    display: table;
+font-size:18px;
+}
+.how-do-start-scetion h1{
+	    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+}
+.how-do-start-scetion li{
+    list-style-type: none;
+    line-height: 30px;
+
+}
+.how-do-start-scetion li .fa-check:before, .pool-block li .fa-check-square-o:before{
+	margin-right: 15px;
+    color: #3bb53d;
+    font-size: 21px;
+}
+.pool-block h5{
+color:#fff;
+    padding: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-weight: 600;
+}
+.pool-block{
+	background: #fff;
+    padding: 0px 0px;
+    border-radius: 5px;
+padding-bottom:15px;
+min-height:310px;
+height:100%;
+}
+.pool-block li{
+list-style-type: none;
+line-height: 30px;
+}
+nav{
+    padding-top: 60px;
+}
+nav ul li{
+font-size: 18px;
+}
+.pool-block ul, menu, dir {
+    display: block;
+    list-style-type: none;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 3px;
+    -webkit-padding-start: 20px;
+}
+h5, .jarviswidget>header h2{
+font-family: 'Montserrat', sans-serif;
+font-size:20px;
+}
+.page-footer{
+height:90px;
+font-size:20px;
+}
+.fc-border-separate thead tr, .table thead tr{
+font-size:15px;
+}

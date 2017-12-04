@@ -19,6 +19,7 @@
 		<link rel="stylesheet" type="text/css" media="screen" href="/static/css/smartadmin-production-plugins.min.css">
 		<link rel="stylesheet" type="text/css" media="screen" href="/static/css/smartadmin-production.min.css">
 		<link rel="stylesheet" type="text/css" media="screen" href="/static/css/smartadmin-skins.min.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="/static/css/your_style.css">
 
 		<!-- SmartAdmin RTL Support  -->
 		<link rel="stylesheet" type="text/css" media="screen" href="/static/css/smartadmin-rtl.min.css">
@@ -28,7 +29,10 @@
 		<link rel="icon" href="/static/img/favicon/favicon.ico" type="image/x-icon">
 
 		<!-- GOOGLE FONT -->
-		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700">
+		<!--<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700">
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700" rel="stylesheet">-->
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600" rel="stylesheet">
 
 		<!-- Specifying a Webpage Icon for Web Clip 
 			 Ref: https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html -->
@@ -59,7 +63,7 @@
 			<div id="logo-group">
 			
 				<!-- PLACE YOUR LOGO HERE -->
-			<span id="logo"> <img src="https://imgur.com/pXpORmJ" style="width:20px height:20px" alt="DabMining"> </span>
+			<span id="logo"><img src="/static/img/main-logo.png" width="50px" height="50px"></span>
 				<!-- END LOGO PLACEHOLDER -->
 			</div>
 
@@ -72,9 +76,20 @@
 				<!-- end collapse menu -->
 			</div>
 			<!-- end pulled right: nav area -->
+<div class="col-md-10">
+<div class="col-md-6">
 
-			Rent mining power from  
-			<a href="https://www.miningrigrentals.com/?ref=4838" target="_blank">MiningRigRentals!</a><br>
+			<div class="header-top-heading"><h3>Rent mining power from  
+			<a href="https://www.miningrigrentals.com/?ref=4838" target="_blank">MiningRigRentals!</h3></a><br>
+			</div>
+</div>
+<div class="col-md-6">
+
+			<div class="header-top-heading"><h3>Rent mining power from  
+			<a href="https://www.nicehash.com/" target="_blank">NiceHash!</h3></a><br>
+			</div>
+</div>
+</div>
 		</header>
 		<!-- END HEADER -->
 
@@ -83,6 +98,7 @@
 		<aside id="left-panel">
 			<nav>
 				<ul>
+					
                                         <li class="{{? it.selected === 'index' }}active{{?}}">
                                                 <a href="/"><i class="fa fa-home"></i> <span class="menu-item-parent">Home</span></a>
                                         </li>
@@ -102,6 +118,14 @@
                                         <li class="{{? it.selected === 'about' }}active{{?}}">
 			                        <a href="http://dabmining.co"><i class="fa fa-home"></i> <span class="menu-item-parent">Made by xrobesx</span></a>	
                                         </li>
+ 					<li class="{{? it.selected === 'add_new_coin' }}active{{?}}">
+			                        <a href="/add_new_coin"><i class="fa fa-plus-square-o"></i> <span class="menu-item-parent">Add a New Coin</span></a>	
+                                        </li>
+					<li class="{{? it.selected === '' }}active{{?}}">
+			                        <a href="https://dabsolutions.signup.team" target="_blank"><i class="fa fa-sign-in"></i> <span class="menu-item-parent">Join our Slack</span></a>	
+                                        </li>
+				
+ 					
                                </ul>
 			</nav>
 			<span class="minifyme" data-action="minifyMenu"> 
