@@ -34,9 +34,9 @@
     "website": {
         "enabled": true,
         "host": "0.0.0.0",
-        "siteTitle": "UNOMP Beta",
+        "siteTitle": "DabMining.co",
         "port": 80,
-        "stratumHost": "pool.unomp.org",
+        "stratumHost": "stratum.dabmining.co",
         "stats": {
             "updateInterval": 60,
             "historicalRetention": 43200,
@@ -45,7 +45,7 @@
             "#FF9655", "#FFF263", "#6AF9C4"]
         },
         "adminCenter": {
-            "enabled": true,
+            "enabled": false,
             "password": "password"
         }
     },
