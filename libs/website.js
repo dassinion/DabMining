@@ -42,9 +42,12 @@ module.exports = function(logger){
         'getting_started.html': 'getting_started',
         'stats.html': 'stats',
         'workers.html': 'workers',
-        'api.html': 'api',
+	'api.html': 'api',
+	'add_new_coin.html': 'add_new_coin',
         'admin.html': 'admin',
         'mining_key.html': 'mining_key'
+	
+	
     };
 
     var pageTemplates = {};
@@ -69,6 +72,8 @@ module.exports = function(logger){
                 break;
         }
     });
+
+
 
     var processTemplates = function(){
 
