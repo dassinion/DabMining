@@ -45,7 +45,9 @@ module.exports = function(logger){
 	'api.html': 'api',
 	'add_new_coin.html': 'add_new_coin',
         'admin.html': 'admin',
-        'mining_key.html': 'mining_key'
+        'mining_key.html': 'mining_key',
+        'dabslack.html': 'dabslack',
+	'rent_hash.html': 'rent_hash'
 	
 	
     };
