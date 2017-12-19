@@ -486,8 +486,12 @@ the `merged-pooler` and `node-multi-hashing` modules, and any config files that 
 * Compare your `config.json` and `pool_configs/coin.json` configurations to the latest example ones in this repo or the ones in the setup instructions where each config field is explained. You may need to modify or add any new changes.
 
 
-[Credits](//github.com/sigwo/unified-node-open-mining-portal/blob/master/CREDITS.md)
--------
+Donations
+---------
+To support development of this project to the new developer, feel free to donate :)
+
+* BTC: `1JsoXNsPkogVvm28EJoJbFBYfnfdwYZYbL`
+* LTC: `Lhj43AqqyM8xoH5jmErALivxy6onxkifAJ`
 
 License
 -------
